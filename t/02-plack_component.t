@@ -11,4 +11,8 @@ BEGIN {
 
 can_ok( 'Plack::App::OAI', qw( call ) );
 
-done_testing( 2 );
+my $app = Plack::App::OAI->new();
+isa_ok( $app, 'Plack::App::OAI' );
+isa_ok( $app, 'Plack::Component' );
+
+done_testing( 4 );
