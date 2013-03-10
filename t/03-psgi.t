@@ -15,7 +15,7 @@ my $app = Plack::App::OAI->new();
 test_psgi $app, sub {
     my $cb = shift;
     my $res = $cb->( GET '/' );
-    is( $res->content_type, 'text/plain', 'Checking if we get the right content type' );
+    is( $res->content_type, 'text/xml', 'Checking if we get the right content type' );
     is( $res->content, 'Hello', 'Checking if we get the right content' );
 };
 
