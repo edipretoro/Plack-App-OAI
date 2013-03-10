@@ -8,3 +8,5 @@ use Test::More;
 BEGIN {
     use_ok( 'Plack::App::OAI' ) or exit;
 }
+
+done_testing( 1 );
