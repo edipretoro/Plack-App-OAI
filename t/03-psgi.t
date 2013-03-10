@@ -16,7 +16,7 @@ test_psgi $app, sub {
     my $cb = shift;
     my $res = $cb->( GET '/' );
     is( $res->content_type, 'text/xml', 'Checking if we get the right content type' );
-    is( $res->content, 'Hello', 'Checking if we get the right content' );
+    like( $res->content, qr{<\?xml.*\?>}, 'Checking if we get the right content' );
 };
 
 done_testing( 3 );
