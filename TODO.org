@@ -1,0 +1,2 @@
+- [ ] handle the errors in a OAI-PMH way
+- [ ] managing the parameters of the different verbs
